@@ -1,0 +1,26 @@
+{
+  "name": "projeto_ts",
+  "version": "1.0.0",
+  "description": "Implementação de MLP com Backpropagation para classificação de números (0-7)",
+  "main": "dist/principal.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "npm run build && node dist/main.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "rna",
+    "mlp",
+    "backpropagation",
+    "typescript"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/xlsx": "^0.0.35",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "xlsx": "^0.18.5"
+  }
+}

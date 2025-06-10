@@ -3,8 +3,9 @@ import { testarRede } from "./rede-neural/testarRede";
 import { ExemploTreinamento, RedeNeural, ResultadoTeste } from "./tipos";
 
 export function testeNormalizados(rede: RedeNeural, dadosTreinamento: ExemploTreinamento[]) {
-  // Testa a rede neural com os valores de treinamento
   console.log('\nTestando a rede neural com os dados de treinamento:');
+
+  // Testa a rede neural com os valores de treinamento
   dadosTreinamento.forEach(exemplo => {
     // Obtém o valor original a partir do valor normalizado
     const valorOriginal = obterValorOriginal(exemplo.entrada);

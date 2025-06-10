@@ -6,7 +6,7 @@ export function testarRede(
   entrada: number,
   valorOriginal?: number
 ): ResultadoTeste {
-  // Realiza a propagação direta
+  // Realiza a propagação direta para obter as saídas da rede
   const saida = propagacaoDireta(rede, entrada);
 
   // Converte a saída para valores binários (0 ou 1)

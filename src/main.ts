@@ -1,5 +1,4 @@
 import { criarDadosTreinamento } from './formulas/dados';
-import { ResultadoTeste } from './tipos';
 import { testeIntermediarios, testeNormalizados } from './testesDaRede';
 import { criarRedeNeural } from './rede-neural/criarRedeNeural';
 import { treinarRede } from './rede-neural/treinarRede';

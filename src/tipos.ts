@@ -10,8 +10,6 @@ export interface Camada {
    * do neurônio j da camada anterior para o neurônio i desta camada 
    */
   pesos: number[][];
-
-  bias: number[];
 }
 
 

@@ -18,9 +18,6 @@ export function propagacaoDireta(rede: RedeNeural, entrada: number): number[] {
       soma += camadaOculta.pesos[i][j] * camadaEntrada.saidas[j];
     }
 
-    // Adiciona o bias (termo independente)
-    soma += camadaOculta.bias[i];
-
     // Guarda o valor antes da ativação
     camadaOculta.entradas[i] = soma;
 
@@ -36,9 +33,6 @@ export function propagacaoDireta(rede: RedeNeural, entrada: number): number[] {
     for (let j = 0; j < camadaOculta.tamanho; j++) {
       soma += camadaSaida.pesos[i][j] * camadaOculta.saidas[j];
     }
-
-    // Adiciona o bias
-    soma += camadaSaida.bias[i];
 
     // Guarda o valor antes da ativação
     camadaSaida.entradas[i] = soma;

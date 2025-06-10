@@ -51,9 +51,6 @@ export function backpropagation(rede: RedeNeural, alvo: number[]): void {
       // Atualiza o peso
       camadaSaida.pesos[i][j] += ajuste;
     }
-
-    // Atualiza o bias
-    camadaSaida.bias[i] += rede.taxaAprendizado * camadaSaida.deltas[i];
   }
 
   // Atualiza os pesos da camada oculta
@@ -67,8 +64,5 @@ export function backpropagation(rede: RedeNeural, alvo: number[]): void {
       // Atualiza o peso
       camadaOculta.pesos[i][j] += ajuste;
     }
-
-    // Atualiza o bias
-    camadaOculta.bias[i] += rede.taxaAprendizado * camadaOculta.deltas[i];
   }
 }

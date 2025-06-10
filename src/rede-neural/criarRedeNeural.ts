@@ -22,8 +22,7 @@ export function criarRedeNeural(
     entradas: new Array(tamanhoEntrada).fill(0),
     saidas: new Array(tamanhoEntrada).fill(0),
     deltas: new Array(tamanhoEntrada).fill(0),
-    pesos: [], // Camada de entrada não tem pesos de entrada
-    bias: []   // Camada de entrada não tem bias
+    pesos: [] // Camada de entrada não tem pesos de entrada
   };
 
   // Cria a camada oculta
@@ -32,8 +31,7 @@ export function criarRedeNeural(
     entradas: new Array(tamanhoOculta).fill(0),
     saidas: new Array(tamanhoOculta).fill(0),
     deltas: new Array(tamanhoOculta).fill(0),
-    pesos: [],
-    bias: new Array(tamanhoOculta).fill(0)
+    pesos: []
   };
 
   // Cria a camada de saída
@@ -42,13 +40,12 @@ export function criarRedeNeural(
     entradas: new Array(tamanhoSaida).fill(0),
     saidas: new Array(tamanhoSaida).fill(0),
     deltas: new Array(tamanhoSaida).fill(0),
-    pesos: [],
-    bias: new Array(tamanhoSaida).fill(0)
+    pesos: []
   };
 
 
   // =========================================================
-  // INICIALIZAÇÃO DOS PESOS E BIAS
+  // INICIALIZAÇÃO DOS PESOS
 
   // Inicializa os pesos da camada oculta com valores aleatórios pequenos
   for (let i = 0; i < tamanhoOculta; i++) {
@@ -57,8 +54,6 @@ export function criarRedeNeural(
       // Valores entre -0.1 e 0.1
       camadaOculta.pesos[i][j] = Math.random() * 0.2 - 0.1;
     }
-    // Inicializa o bias com valor aleatório pequeno
-    camadaOculta.bias[i] = Math.random() * 0.2 - 0.1;
   }
 
   // Inicializa os pesos da camada de saída com valores aleatórios pequenos
@@ -68,8 +63,6 @@ export function criarRedeNeural(
       // Valores entre -0.1 e 0.1
       camadaSaida.pesos[i][j] = Math.random() * 0.2 - 0.1;
     }
-    // Inicializa o bias com valor aleatório pequeno
-    camadaSaida.bias[i] = Math.random() * 0.2 - 0.1;
   }
 
   // =========================================================

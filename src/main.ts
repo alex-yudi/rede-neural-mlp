@@ -14,7 +14,7 @@ function main() {
   const tamanhoOculta = 6;        // Número de neurônios na camada oculta
   const tamanhoSaida = 3;         // (representação binária de 3 bits)
   const taxaAprendizado = 0.2;
-  const epocas = 150_000;
+  const epocas = 500_000;
 
   /*
   Anotações:
